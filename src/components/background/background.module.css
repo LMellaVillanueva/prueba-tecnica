@@ -1,0 +1,16 @@
+.bg{
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-image: linear-gradient(to bottom, black, black, rgb(135, 255, 233));
+    animation: opacity 1.2s ease-in;
+}
+
+@keyframes opacity{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

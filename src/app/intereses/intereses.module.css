@@ -1,0 +1,124 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  height: 95vh;
+  margin: 0 2rem 2rem 2rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 10%;
+  line-height: 1.8rem;
+  border-radius: 1.5rem;
+  filter: drop-shadow(3px 2px 2px rgb(0, 0, 0));
+  box-shadow: 0 0 5px rgba(135, 255, 253, 0.8), 0 0 10px rgba(0, 0, 0),
+    0 0 15px rgba(0, 0, 0), 0 0 20px rgba(0, 0, 0);
+}
+
+.text {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+  filter: drop-shadow(2px 5px 20px rgb(135, 255, 253));
+  animation: anim 2s ease-in-out;
+}
+
+.li {
+  animation: list 1s ease;
+}
+.li2 {
+  animation: list 1.5s ease;
+}
+.li3 {
+  animation: list 2s ease;
+}
+.li4 {
+  animation: list 2.5s ease;
+}
+.li5 {
+  animation: list 3s ease;
+}
+
+@keyframes anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes list {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes line {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (width > 500px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 90vh;
+  }
+  .list {
+    width: 60%;
+    padding: 5%;
+    font-size: 1.3rem;
+    background-image: linear-gradient(to bottom, black, black, rgb(77, 153, 139));
+  }
+  .li {
+    filter: drop-shadow(0px 0px 5px rgb(135, 255, 253));
+  }
+  .li2 {
+    filter: drop-shadow(0px 0px 5px rgb(135, 255, 253));
+  }
+  .li3 {
+    filter: drop-shadow(0px 0px 5px rgb(135, 255, 253));
+  }
+  .li4 {
+    filter: drop-shadow(0px 0px 5px rgb(135, 255, 253));
+  }
+  .li5 {
+    filter: drop-shadow(0px 0px 5px rgb(135, 255, 253));
+  }
+  .text {
+    font-size: 2.5rem;
+  }
+  .line {
+    position: absolute;
+    width: 80vw;
+    border: 1px solid rgb(135, 255, 233, 0.5);
+    border-radius: 50%;
+    z-index: -1;
+    bottom: 49%;
+    filter: drop-shadow(0px 0px 5px rgb(0, 255, 208));
+    animation: line 1.5s ease-out;
+  }
+}
+
+@media (width < 500px) {
+  .line{
+    display: none;
+  }
+}

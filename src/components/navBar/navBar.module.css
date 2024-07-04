@@ -1,0 +1,70 @@
+.list{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    margin: 0.5rem 0 2rem;
+    padding: 2rem 0 2rem;
+    list-style-type: none;
+    border: 3px rgb(66, 187, 177) solid;
+    background-color: black;
+    border-radius: 5rem;
+    transition: all;
+}
+
+.linea{
+    height: 3vh;
+    border: 1px rgb(135, 255, 245) solid;
+}
+
+.select:hover{
+    transition-duration: 0.3s;
+    filter: drop-shadow(0px 0px 10px rgb(135, 255, 245))
+}
+
+@keyframes anim{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes border {
+    0% {
+        filter: drop-shadow(0px 0px 15px rgb(0, 229, 255));
+    }
+    
+    25% {
+        filter: drop-shadow(0px 0px 15px rgb(60, 118, 123));
+        
+    }
+    
+    50% {
+        filter: drop-shadow(0px 0px 10px rgb(0, 90, 91));
+    }
+    
+    75% {
+        filter: drop-shadow(0px 0px 15px rgb(20, 235, 255));
+        
+    }
+    
+    100% {
+        filter: drop-shadow(0px 0px 15px rgb(0, 238, 255));
+    }
+}
+
+.anim{
+    animation: anim 2s ease;
+}
+
+@media (width > 500px) {
+    .list{
+        padding: 1rem 0 1rem;
+        border-radius: 1rem;
+        width: 80vw;
+        animation: border 8s infinite ease-in-out;
+        border: 2px rgb(66, 187, 177) solid;
+    }
+}

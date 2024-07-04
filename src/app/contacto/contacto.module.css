@@ -1,0 +1,138 @@
+.container{
+  height: 95vh;
+}
+
+.text {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  filter: drop-shadow(2px 5px 20px rgb(135, 255, 253));
+  text-align: center;
+  animation: anim2 1.5s ease;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5%;
+  gap: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  filter: drop-shadow(3px 2px 2px rgb(0, 0, 0));
+}
+
+.label {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1.2rem;
+  filter: drop-shadow(2px 5px 5px rgb(0, 0, 0));
+  animation: anim 1.5s ease;
+}
+
+.input {
+  height: 2rem;
+  width: 13rem;
+  border: 2px solid rgb(135, 255, 253);
+  border-radius: 10px;
+  font-size: 1rem;
+  animation: anim 1.5s ease;
+  background-color: rgb(21, 42, 42);
+}
+
+.inputArea {
+  border: 2px solid rgb(135, 255, 253);
+  border-radius: 1rem;
+  font-size: 1rem;
+  padding: 2%;
+  animation: anim 1.5s ease;
+  background-color: rgb(21, 42, 42);
+}
+
+.button {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  border: 2px solid rgb(135, 255, 253);
+  border-radius: 1rem;
+  font-size: 1rem;
+  padding: 4%;
+  background-color: rgb(21, 42, 42);
+  animation: anim 1.5s ease;
+  cursor: pointer;
+}
+
+.button:hover{
+    filter: drop-shadow(0px 0px 5px rgb(34, 138, 119));
+    background-color: rgb(44, 100, 100);
+}
+
+@keyframes anim {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes anim2 {
+  from {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes line {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (width > 500px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .text {
+    font-size: 2.5rem;
+  }
+  .input {
+    width: 15rem;
+    filter: drop-shadow(0px 0px 5px rgb(0, 255, 208));
+}
+.inputArea {
+    width: 27rem;
+    filter: drop-shadow(0px 0px 5px rgb(0, 255, 208));
+  }
+  .form {
+    border-radius: 1.5rem;
+    box-shadow: 0 0 5px rgba(135, 255, 253, 0.8), 0 0 10px rgba(0, 0, 0),
+      0 0 15px rgba(0, 0, 0), 0 0 20px rgba(0, 0, 0);    background-image: linear-gradient(to bottom, black, black, rgb(77, 153, 139));
+  }
+  .line {
+    position: absolute;
+    width: 80vw;
+    border: 1px solid rgb(135, 255, 233, 0.5);
+    border-radius: 50%;
+    z-index: -1;
+    bottom: 49%;
+    filter: drop-shadow(0px 0px 5px rgb(0, 255, 208));
+    animation: line 1.5s ease-out;
+  }
+}
+
+@media (width < 500px) {
+  .line{
+    display: none;
+  }
+}
